@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun Soni - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60%;
+            height: 3px;
+            background-color: #059669; /* Emerald 600 */
+            border-radius: 2px;
+        }
+        .nav-link.active {
+            font-weight: 600;
+            color: #059669; /* Emerald 600 */
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Back to Top Button */
+        #backToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place at the bottom */
+            right: 30px; /* Place at the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #059669; /* Emerald 600 */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #047857; /* Darker Emerald */
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-center md:justify-between items-center px-4">
+            <div class="text-2xl font-bold text-emerald-600 hidden md:block">Arjun Soni</div>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="nav-link text-gray-700 hover:text-emerald-600 transition duration-300 rounded-md py-2 px-3">Home</a></li>
+                <li><a href="#summary" class="nav-link text-gray-700 hover:text-emerald-600 transition duration-300 rounded-md py-2 px-3">Summary</a></li>
+                <li><a href="#skills" class="nav-link text-gray-700 hover:text-emerald-600 transition duration-300 rounded-md py-2 px-3">Skills</a></li>
+                <li><a href="#experience" class="nav-link text-gray-700 hover:text-emerald-600 transition duration-300 rounded-md py-2 px-3">Experience</a></li>
+                <li><a href="#education" class="nav-link text-gray-700 hover:text-emerald-600 transition duration-300 rounded-md py-2 px-3">Education</a></li>
+                <li><a href="#contact" class="nav-link text-gray-700 hover:text-emerald-600 transition duration-300 rounded-md py-2 px-3">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-20 md:py-32 text-center rounded-b-lg shadow-xl">
+        <div class="container mx-auto px-4 fade-in">
+            <!-- Profile Picture -->
+            <img src="https://media.licdn.com/dms/image/v2/C4E03AQEPrvYmTj0I_w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1606872566469?e=1755734400&v=beta&t=guoBxj31KySSK_n4fyQ4gUixrOLl7JYIlNznPdV2IIk"
+                 onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/333333?text=Arjun';"
+                 alt="Arjun Soni Profile Picture"
+                 class="w-36 h-36 md:w-48 md:h-48 rounded-full mx-auto mb-6 border-4 border-white shadow-lg object-cover transform transition-transform duration-500 hover:scale-105">
+
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">Arjun Soni</h1>
+            <p class="text-xl md:text-2xl mb-6 animate-fade-in-up delay-100">Senior Data Warehouse Specialist | Data Engineer | AI & Machine Learning Enthusiast</p>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-up delay-200">
+                Experienced professional in Data Analytics, Machine Learning, and AI, passionate about personal projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="py-16 bg-white shadow-lg rounded-lg mx-4 md:mx-auto max-w-4xl mt-8 fade-in">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 section-heading">Summary</h2>
+            <div class="space-y-4 text-lg leading-relaxed">
+                <p>Experienced Graduate Research Assistant with a demonstrated history of working in the education industry. Skilled in Statistical Analysis, IBM DB2, SQL, Public Speaking, Management, and Good Communication skills. Strong education professional with a Masters focused in operations and management Information Systems from Northern Illinois University.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50 shadow-lg rounded-lg mx-4 md:mx-auto max-w-4xl mt-8 fade-in">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 section-heading">Top Skills & Certifications</h2>
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Top Skills</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">Data Analytics</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">Machine Learning</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">Artificial Intelligence (AI)</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">Statistical Analysis</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">IBM DB2</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">SQL</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">Public Speaking</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">Management</span>
+                    <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-emerald-200 transition duration-200 cursor-default">Good Communication skills</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Certifications</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-teal-200 transition duration-200 cursor-default">SQL: Data Reporting and Analysis</span>
+                    <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-teal-200 transition duration-200 cursor-default">Learning Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-white shadow-lg rounded-lg mx-4 md:mx-auto max-w-4xl mt-8 fade-in">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 section-heading">Experience</h2>
+
+            <!-- Tata Consultancy Services -->
+            <div class="mb-10 p-6 bg-gray-50 rounded-lg shadow-md border-l-4 border-emerald-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">Data Warehouse Specialist/ Senior Data Engineer</h3>
+                <p class="text-emerald-600 text-lg mb-2">Tata Consultancy Services</p>
+                <p class="text-gray-600 mb-3">May 2022 - Present (3 years 3 months) | Atlanta, Georgia, United States</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Designed and maintained high-performance databases for analytics and reporting needs.</li>
+                    <li>Developed and optimized ETL processes, achieving 42% reduction in processing time.</li>
+                    <li>Automated legacy pipelines, enhancing reliability by 29%.</li>
+                    <li>Created ETL scripts to centralize and transform data from diverse sources.</li>
+                    <li>Deployed machine learning models in production for real-time predictions.</li>
+                    <li>Collaborated with cross-functional teams to gather requirements and deliver tailored solutions.</li>
+                    <li>Utilized SQL, Python, and R for advanced analytics on structured and unstructured data.</li>
+                    <li>Led Customer Data Lake activities to design scalable ETL pipelines.</li>
+                    <li>Write, debug, and implement complex queries to manage relational and NoSQL databases (e.g., DynamoDB, MongoDB).</li>
+                    <li>Built real-time Pub/Sub, Kafka streaming pipelines to ingest real-time data into GCP BigQuery.</li>
+                    <li>Collaborated with cross-functional teams to ensure seamless integration of data solutions into existing systems.</li>
+                    <li>Performed performance tuning on legacy data pipelines, resulting in a 38% reduction in storage costs and improved slot utilization. This optimization enhanced overall system efficiency and reduced operational expenses.</li>
+                </ul>
+            </div>
+
+            <!-- Factspan -->
+            <div class="mb-10 p-6 bg-gray-50 rounded-lg shadow-md border-l-4 border-emerald-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">Data Engineer</h3>
+                <p class="text-emerald-600 text-lg mb-2">Factspan</p>
+                <p class="text-gray-600 mb-3">February 2021 - April 2022 (1 year 3 months) | Atlanta, Georgia, United States</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Data Engineer with a robust background in designing and managing data pipelines, performing data quality assessments, and implementing cloud data solutions. My experience spans across complex data migrations, statistical modeling, and interactive data visualization, making me adept at transforming raw data into strategic insights.</li>
+                    <li>Skilled in building and optimizing ETL pipelines to migrate and transform data using Python, R, SQL, and Informatica PowerCenter.</li>
+                    <li>Extensive experience with data migration from legacy systems to Google Cloud Platform (GCP) and Snowflake, leveraging Big Data tools and Google Analytics for advanced data analysis.</li>
+                    <li>Proficient in conducting data quality testing with Informatica Analyst, Informatica Developer, and Python to ensure data integrity and accuracy.</li>
+                    <li>Expertise in developing regression, correlation, and other statistical models to derive actionable insights from transactional and shipping data.</li>
+                    <li>Experience in building interactive dashboards and automated reports using Tableau and Google Analytics to support business decision-making.</li>
+                    <li>Conducting in-depth analysis using BigQuery on Google Cloud Platform to uncover valuable insights and drive strategy.</li>
+                    <li>Led the successful migration of data from legacy systems to Google Cloud Platform, ensuring a smooth transition and improved data accessibility.</li>
+                    <li>Developed a custom Python tool to identify and resolve data discrepancies between legacy and new databases, enhancing data accuracy.</li>
+                    <li>Analyzed and presented e-commerce data insights to stakeholders, driving strategic decisions and optimizing business processes.</li>
+                    <li>Spearheaded data quality initiatives, profiling tables and addressing issues to ensure the reliability of new cloud databases.</li>
+                </ul>
+            </div>
+
+            <!-- Northern Illinois University -->
+            <div class="mb-10 p-6 bg-gray-50 rounded-lg shadow-md border-l-4 border-emerald-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">Graduate Assistant</h3>
+                <p class="text-emerald-600 text-lg mb-2">Northern Illinois University</p>
+                <p class="text-gray-600 mb-3">January 2019 - December 2020 (2 years) | DeKalb County, Illinois, United States</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Extract Transform and Load the Data from unstructured files to structured format and load it into Oracle Database.</li>
+                    <li>Build Desktop based application using Python and Tkinter.</li>
+                    <li>Write Scripts in python to automate some of the processes.</li>
+                    <li>Modeled Data to derive actionable insights for the Department.</li>
+                    <li>Performed SQL queries to retrieve Data.</li>
+                    <li>Understanding Business Requirements of the project.</li>
+                    <li>Creating Dashboards on Power-BI to presents the insight from the data to the key stakeholders.</li>
+                    <li>Tools Used: Python, Peoplesoft Database, Power-BI, MS Excel, Microsoft SQL Server.</li>
+                </ul>
+            </div>
+
+            <!-- Chicago Area Alternative Education League (CAAEL.ORG) -->
+            <div class="mb-10 p-6 bg-gray-50 rounded-lg shadow-md border-l-4 border-emerald-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">Business Data Analyst</h3>
+                <p class="text-emerald-600 text-lg mb-2">Chicago Area Alternative Education League (CAAEL.ORG)</p>
+                <p class="text-gray-600 mb-3">August 2019 - December 2019 (5 months) | Forest Park, Illinois, United States</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Prepared forecasts and identified business trends in the data by the help of Data Analytics.</li>
+                    <li>Modelled the data to answer Business questions. Used Tableau to visualize and explain the Data and Insights from the analytics to the Stakeholders.</li>
+                    <li>Came up with process improvement suggestions for on boarding to help in attracting new clients for the Business. Also gave suggestions on how to improve client retention.</li>
+                    <li>Provided insights on effectively running marketing campaigns including direct mail, email, mobile and other digital channels like Instagram, Facebook etc.</li>
+                    <li>Identified business requirements and devised implementation strategies to solve business problems.</li>
+                    <li>Researched and gathered data related to the similar business. Preformed data wrangle and analyze the potential customers for the business. Gave suggestions on what areas to focus more.</li>
+                    <li>Worked on Agile project development environment.</li>
+                    <li>Tools Used: Python, SQL, Tableau, MS Excel, Agile.</li>
+                </ul>
+            </div>
+
+            <!-- BYJU'S (Think & Learn Pvt. Ltd.) -->
+            <div class="mb-10 p-6 bg-gray-50 rounded-lg shadow-md border-l-4 border-emerald-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">Senior Data Science Analyst</h3>
+                <p class="text-emerald-600 text-lg mb-2">BYJU'S (Think & Learn Pvt. Ltd.)</p>
+                <p class="text-gray-600 mb-3">April 2017 - August 2018 (1 year 5 months) | Hyderabad Area, India</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Analyzed large and Multi-Dimensional datasets by leveraging analytical methods like (Statistics, Math's, Machine-learning etc.)</li>
+                    <li>Collected and Interpreted the Data to Analyze it and Identify the patterns and trends in the Data.</li>
+                    <li>Acquired Data from primary and secondary data sources and maintaining Databases.</li>
+                    <li>Perform Advanced SQL queries to extract the Data.</li>
+                    <li>Collaborated with Data Engineers and Software engineers to build pipelines.</li>
+                    <li>Worked along with both Business and Technical teams to understand the requirements.</li>
+                    <li>Used SQL Server Reporting Services to build reports and present it to the Managers of different departments.</li>
+                    <li>Modeled the Data by using Microsoft SQL Server Analysis Services to answer Business questions.</li>
+                    <li>Performed ETL using SQL Server Integration Services to extract data from source data, clean, and transform the data to Load it in SQL Server Management studio.</li>
+                    <li>Helped Sales and Marketing team to determine the Target crowd for the product and analyzed appropriate time for doing B2B and B2C activities so that the Sales and Marketing team could yield Maximum revenue.</li>
+                    <li>Created Visualization Dashboards to present the insights from the Data.</li>
+                    <li>Collected and analyze the information about the competitor's data about the similar products and recommended Changes needed in the company's product.</li>
+                    <li>Analyzed Big Data using Spark, Machine Learning algorithms while also working on both Structured and Unstructured Data.</li>
+                    <li>Assisted Stakeholders in making Data driven decisions.</li>
+                </ul>
+            </div>
+
+            <!-- Last Channel Media -->
+            <div class="mb-10 p-6 bg-gray-50 rounded-lg shadow-md border-l-4 border-emerald-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">Market Research Intern</h3>
+                <p class="text-emerald-600 text-lg mb-2">Last Channel Media</p>
+                <p class="text-gray-600 mb-3">November 2016 - January 2017 (3 months) | Hyderabad Area, India</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Collected data about the competitors' products details while cleaning Raw Data and Performing SQL Queries.</li>
+                    <li>Performed ETL activities and loaded the Data into SQL Server Management Studio.</li>
+                </ul>
+            </div>
+
+            <!-- HCL Technologies -->
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md border-l-4 border-emerald-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">Web Developer</h3>
+                <p class="text-emerald-600 text-lg mb-2">HCL Technologies</p>
+                <p class="text-gray-600 mb-3">May 2016 - June 2016 (2 months) | Hyderabad Area, India</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li>Summer Training Program on CYBER Shopping Development based on the concepts of Core Java.</li>
+                    <li>Build a sample CYBER Shopping website as a part of internship training.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-50 shadow-lg rounded-lg mx-4 md:mx-auto max-w-4xl mt-8 fade-in">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 section-heading">Education</h2>
+
+            <div class="mb-8 p-6 bg-white rounded-lg shadow-md border-l-4 border-teal-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">Master of Science - MS, Operation Management and Information Systems</h3>
+                <p class="text-teal-600 text-lg mb-2">Northern Illinois University</p>
+                <p class="text-gray-600">2019 - 2020</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow-md border-l-4 border-teal-500 hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900">BTech - Bachelor of Technology, Computer Science</h3>
+                <p class="text-teal-600 text-lg mb-2">Gitam university</p>
+                <p class="text-gray-600">2013-2017</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white shadow-lg rounded-lg mx-4 md:mx-auto max-w-4xl mt-8 mb-8 fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 section-heading">Contact</h2>
+            <p class="text-lg mb-4">Feel free to connect with me:</p>
+            <div class="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row md:justify-center md:space-x-6">
+                <p class="text-gray-700 text-lg flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-emerald-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                    </svg>
+                    3478 Lakeside Drive NE, Atlanta, Georgia.
+                </p>
+                <p class="text-gray-700 text-lg flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-emerald-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.05 21 3 13.95 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1v3.5c0 .35-.09.7-.24 1.02l-2.2 2.2z"/>
+                    </svg>
+                    8157934369 (Home)
+                </p>
+                <a href="mailto:arjun.soni1702@gmail.com" class="text-emerald-600 hover:text-emerald-800 transition duration-300 text-lg font-semibold flex items-center transform hover:scale-105">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    arjun.soni1702@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/soniarjun" target="_blank" class="text-emerald-600 hover:text-emerald-800 transition duration-300 text-lg font-semibold flex items-center transform hover:scale-105">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764c.967 0 1.75.79 1.75 1.764s-.783 1.764-1.75 1.764zM22 19h-3v-5.604c0-3.368-4-3.582-4 0V19h-3V8h3v1.765c1.395-2.178 5-2.355 5 .001V19z" clip-rule="evenodd" />
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center rounded-t-lg shadow-inner">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Arjun Soni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Go to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+        // JavaScript for smooth scrolling and active navigation links
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+            const backToTopBtn = document.getElementById('backToTopBtn');
+
+            // Function to update active nav link based on scroll position
+            const updateActiveNavLink = () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100; // Offset for fixed header
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.href.includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            // Smooth scroll for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 70, // Adjust for fixed header height
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Show/hide back to top button and update active nav link on scroll
+            window.addEventListener('scroll', () => {
+                updateActiveNavLink();
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    backToTopBtn.style.display = "block";
+                } else {
+                    backToTopBtn.style.display = "none";
+                }
+            });
+
+            // Scroll to top when the button is clicked
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Intersection Observer for fade-in effect on sections
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.2, // When 20% of the item is visible
+                rootMargin: "0px 0px -50px 0px" // Start fading in a bit before it hits the bottom of the viewport
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                        appearOnScroll.unobserve(entry.target); // Stop observing once it has appeared
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>
